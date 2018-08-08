@@ -20,6 +20,8 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import com.github.clans.fab.FloatingActionMenu;
+
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
     Toolbar toolbar;
     DrawerLayout mDrawerLayout;
@@ -29,22 +31,33 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     AppCompatEditText username, password;
     TextInputLayout userLayout, passwordLayout;
 
-    //declaring a floating action button
-    FloatingActionButton mFloatingActionButton;
+    //FloatingActionMenu mFloatingActionMenu;
+    //FloatingActionButton record;
 
+    //declaring a floating action button
+    //FloatingActionButton mFloatingActionButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
 
+       /* mFloatingActionMenu = (FloatingActionMenu) findViewById(R.id.floatingActionMenu);
+        record = (FloatingActionButton) findViewById(R.id.floatingActionRecord);
+        record.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Record clicked", Toast.LENGTH_SHORT).show();
+            }
+        });*/
+
         //referencing to the floating button
-        mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab_id);
+        /*mFloatingActionButton = (FloatingActionButton) findViewById(R.id.fab_id);
         mFloatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Floating Button Clicked", Toast.LENGTH_SHORT).show();
             }
-        });
+        });*/
 
         mRelativeLayout = (RelativeLayout) findViewById(R.id.activity_main);
         mRelativeLayout.setOnClickListener(null);

@@ -15,5 +15,8 @@
     <string name="close_drawer">close drawer</string>
     <string name="spam">Spam</string>
     <string name="fingerprint">Fingerprint</string>
+    <string name="photo">photo</string>
+    <string name="scanFingerprint">Scan Fingerprint</string>
+    <string name="edit">Edit Details</string>
 
 </resources>

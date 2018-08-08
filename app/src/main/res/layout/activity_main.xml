@@ -2,12 +2,12 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    android:id="@+id/activity_main">
+    tools:context=".MainActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -53,19 +53,60 @@
             android:hint="password"
             android:inputType="textPassword" />
 
-    </android.support.design.widget.TextInputLayout>
 
+    </android.support.design.widget.TextInputLayout>
+    <!-- floating button and menu widget/object
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:id="@+id/fab_id"
         android:layout_alignParentEnd="true"
-        android:elevation="16dp"
+        android:layout_alignParentRight="true"
         android:layout_margin="16dp"
-        app:fabSize="normal"
+        android:backgroundTint="@color/colorFab"
+        android:elevation="16dp"
         android:src="@drawable/fab"
-        android:backgroundTint="@color/colorFab"/>
+        app:fabSize="normal" />-->
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floatingActionMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        app:menu_backgroundColor="@android:color/transparent"
+        app:menu_fab_label=""
+        app:menu_labels_colorNormal="@color/background"
+        app:menu_labels_colorPressed="@color/colorAccent"
+        app:menu_labels_textColor="@color/text"
+        app:menu_openDirection="up"
+        app:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/photo"
+            app:fab_label="@string/photo"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/floatingActionRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mic"
+            app:fab_label="Record"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/floatingActionEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/edit"
+            app:fab_label="@string/edit"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
 
 </RelativeLayout>
